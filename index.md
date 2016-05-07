@@ -16,16 +16,15 @@ Traditional image resizing techniques, such as image scaling, resampling, or cro
 2. Cumulative minimum energy computation (aka creating a "seam map")
 3. Backtracking for minimum seam identification
 4. Minimum seam removal/insertion
-
-These 4 steps are repeated n times to reduce or enlarge the in either dimensions by n pixels
-
-Repeating all the steps is very time consuming, especially for large images and/or removing many seams, thus real-time application is not possible. 
+These 4 steps are repeated n times to reduce or enlarge the in either dimensions by n pixels. Repeating all the steps is very time consuming, especially for large images and/or removing many seams, thus real-time application is not possible. 
 
 ### Approach
 
-My project focused on exploring different ways to parallelize the seam carving algorithm
+My project focused on exploring different ways to parallelize the seam carving algorithm.
 
 ### Results
 
 ### References
 1. Avidan S., Shamir A. Seam Carving for Content-Aware Image Resizing. ACM Trans. Graph. Vol 26., No. 3, 2007
+2. Rubinstein M, Shamir A,Avidan S. Improved seam carving for video retargeting. ACM Trans Graph(SIGGRAPH), 2008, 27(3): 1-9
+3. V. Vineet and P. J. Narayanan, "CUDA cuts: Fast graph cuts on the GPU," Computer Vision and Pattern Recognition Workshops, 2008. CVPRW '08. IEEE Computer Society Conference on, Anchorage, AK, 2008, pp. 1-8.
