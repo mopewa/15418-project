@@ -21,3 +21,8 @@ Repeating all the steps is very time consuming, especially for large images and/
 ### Approach
 
 My project focused on exploring different ways to parallelize the seam carving algorithm
+
+### Results
+
+### References
+1. Avidan S., Shamir A. Seam Carving for Content-Aware Image Resizing. ACM Trans. Graph. Vol 26., No. 3, 2007
