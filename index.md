@@ -2,8 +2,10 @@
 layout: default
 title: CUDA Seam Carving
 ---
-### Summary
+# Parallelizing Seam Carving on the GPU with CUDA, an Exploration
+## Mopewa Ogundipe
 
+### Summary
 I explored new ways to parallelize seam carving on the GPU using CUDA.
 
 ### Background
