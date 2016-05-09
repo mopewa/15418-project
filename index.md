@@ -76,7 +76,7 @@ Below are the results of the CUDA implementation of Seam Carving removing 200, 4
 
 <table style="width:100%">
 	<tr>
-	<th>400 seams removede</th>
+	<th>400 seams removed</th>
 	<th>600 seams removed</th>
 	</tr>
 	<tr>
@@ -88,7 +88,7 @@ Below are the results of the CUDA implementation of Seam Carving removing 200, 4
 
 <table style="width:100%">
 	<tr>
-	<th>800 seams removede</th>
+	<th>800 seams removed</th>
 	<th>1000 seams removed</th>
 	</tr>
 	<tr>
@@ -97,6 +97,37 @@ Below are the results of the CUDA implementation of Seam Carving removing 200, 4
 	</tr>
 </table>
 <br/><br/>
+
+#### Performance Evaluation
+I compared my CUDA implementation with a non-optimized sequential version written with C++ and OpenCV. I ran the code on the Latedays Tesla worker node which has a NVIDIA K40 GPU (4.3 TFLOPS) and 15 SMs. I ran multiple tests. I ran the code on a fixed image size of 1920 x 1080 pixels removing 200, 400, 600, 800, and 1000 seams. I also ran the code on images of variable size, removing 200 seams. My code was timed using CycleTimer. 
+
+<table style="width:100%">
+	<tr>
+	<th>Overall performance as function of seams removed</th>
+	<th>Overall performance as function of image width</th>
+	</tr>
+	<tr>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/seams_removed.png" height="360px" style="float:center;"/></td>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/image_width.png" height="360px" style="float:center;"/></td>
+	</tr>
+</table>
+<br/><br/>
+
+<p>Energy computation and Seam map performance </p>
+<img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/seams_removed_functions.png" height="360px" style="float:center;"/>
+
+<table style="width:100%">
+	<tr>
+	<th>Energy computation performance as function of image width</th>
+	<th>Seam map computation performance as function of image width</th>
+	</tr>
+	<tr>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/energy_computation.png" height="360px" style="float:center;"/></td>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/seam_map.png" height="360px" style="float:center;"/></td>
+	</tr>
+</table>
+<br/><br/>
+
 
 ### References
 1. Avidan S., Shamir A. Seam Carving for Content-Aware Image Resizing. ACM Trans. Graph. Vol 26., No. 3, 2007
