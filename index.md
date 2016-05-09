@@ -19,7 +19,7 @@ An energy function is used to determine the importance of each pixel in the imag
 #### 2. Cumulative minimum energy computation (aka creating a "seam map")
  
 Identifying the optimal (minimum energy) seam is done using dynamic programming to compute the cumulative minimal energy of each pixel. For pixels from the second to the last row, the cumulative minimal energy is <code>M(i, j) = E(i, j) + min(M(i-1, j-1), M(i-1, j), M(i-1, j+1))<code>. While for pixels in the first row, <code>M(1,j) = E(i, j)<code>. 
-![Computing the minimum energy matrix](https://github.com/mopewaO/15418-project/blob/gh-pages/images/min_seam.png)
+![Computing the minimum energy matrix](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/min_seam.png)
 
 #### 3. Backtracking for minimum seam identification
  
@@ -61,23 +61,22 @@ Unfortunately, due to struggles with CUDA Thrust and a bug I just couldn't track
 ### Results
 Below are the results of the CUDA implementation of Seam Carving removing 200, 400, 600, 800, and 1000 seams from an image.
 Original Image
-![Original Image](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree.jpg)
+![Original Image](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree.jpg)
 
 200 seams removed
-![200 seams removed](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree_200.jpg)
+![200 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_200.jpg)
 
 400 seams removed
-![400 seams removed](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree_400.jpg)
+![400 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_400.jpg)
 
 600 seams removed
-![600 seams removed](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree_600.jpg)
+![600 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_600.jpg)
 
 800 seams removed
-![800 seams removed](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree_800.jpg)
+![800 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_800.jpg)
 
 1000 seams removed
-![1000 seams removed](https://github.com/mopewaO/15418-project/blob/gh-pages/images/tree_1000.jpg)
-
+![1000 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_1000.jpg)
 
 ### References
 1. Avidan S., Shamir A. Seam Carving for Content-Aware Image Resizing. ACM Trans. Graph. Vol 26., No. 3, 2007
