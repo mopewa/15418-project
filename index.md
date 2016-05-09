@@ -14,8 +14,7 @@ Traditional image resizing techniques, such as image scaling, resampling, or cro
 
 1. Energy computation
  
-An energy function is used to determine the importance of each pixel in the image. In my implementations, I defined the energy function has the sum of the vertical and horizontal gradients across all 3 channels of the image.
-<pre><code>E(i,j) = E_r(i,j) + E_g(i,j) + E_b(i,j)</code><pre>, where E_r(i,j) is the sum of the horizontal and vertical gradients in the image's red channel. <pre><code>E_r(i,j) = 0.5 * (abs(I(i, j-1) - I(i, j+1)) + abs(I(i+1, j) - I(i-1, j)))</pre></code>.
+An energy function is used to determine the importance of each pixel in the image. In my implementations, I defined the energy function has the sum of the vertical and horizontal gradients across all 3 channels of the image. E(i,j) = E_r(i,j) + E_g(i,j) + E_b(i,j), where E_r(i,j) is the sum of the horizontal and vertical gradients in the image's red channel. E_r(i,j) = 0.5 * (abs(I(i, j-1) - I(i, j+1)) + abs(I(i+1, j) - I(i-1, j))).
 
 2. Cumulative minimum energy computation (aka creating a "seam map")
  
