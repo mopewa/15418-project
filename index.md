@@ -20,7 +20,7 @@ An energy function is used to determine the importance of each pixel in the imag
  
 Identifying the optimal (minimum energy) seam is done using dynamic programming to compute the cumulative minimal energy of each pixel. For pixels from the second to the last row, the cumulative minimal energy is <code>M(i, j) = E(i, j) + min(M(i-1, j-1), M(i-1, j), M(i-1, j+1))<code>. While for pixels in the first row, <code>M(1,j) = E(i, j)<code>. 
 
-3. ###### Backtracking for minimum seam identification
+#### 3. Backtracking for minimum seam identification
  
 The pixel with the lowest M in the last row from step 2 represents the end of the vertical seam. In this step we backtrack from this pixel to the top of the image, the path of the backtrack representing the optimal seam.
 
@@ -38,6 +38,7 @@ My project focused on exploring different ways to parallelize the seam carving a
 For every pixel, its four neighbors' are needed to compute the vertical and horizontal gradients to get the energy value. Therefore, computing energy values is straight-forward to parallelize when doing the simple thing first. I divided the image into NxN tiles and mapped those directly to CUDA blocks. Then each thread corresponded to a pixel and each thread loaded the 12 values needed to compute that pixels energy (4 neighbors * 3 channels = 12). 
 
 #### Parallelizing Energy Computation: Optimizations
+
 
 
 
