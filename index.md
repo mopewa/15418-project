@@ -61,10 +61,17 @@ Unfortunately, due to struggles with CUDA Thrust and a bug I just couldn't track
 ### Results
 Below are the results of the CUDA implementation of Seam Carving removing 200, 400, 600, 800, and 1000 seams from an image.
 Original Image
-![Original Image](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree.jpg)
-
-200 seams removed
-![200 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_200.jpg)
+<table style="width:100%">
+	<tr>
+	<th>Original Image</th>
+	<th>200 seams removed</th>
+	</tr>
+	<tr>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree.jpg" height="360px" style="float:center;"/></td>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_200.jpg" height="360px" style="float:center;"/></td>
+	</tr>
+</table>
+<br/><br/>
 
 400 seams removed
 ![400 seams removed](https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/tree_400.jpg)
