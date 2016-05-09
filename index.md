@@ -129,6 +129,19 @@ I compared my CUDA implementation with a non-optimized sequential version writte
 <br/><br/>
 
 
+<table style="width:100%">
+	<tr>
+	<th>Speedup as function of number of seams</th>
+	<th>Speedup as function of image width</th>
+	</tr>
+	<tr>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/numseams_speedup.png" height="360px" style="float:center;"/></td>
+	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/imagesize_speedup.png" height="360px" style="float:center;"/></td>
+	</tr>
+</table>
+<br/><br/>
+
+
 ### References
 1. Avidan S., Shamir A. Seam Carving for Content-Aware Image Resizing. ACM Trans. Graph. Vol 26., No. 3, 2007
 2. Rubinstein M, Shamir A,Avidan S. Improved seam carving for video retargeting. ACM Trans Graph(SIGGRAPH), 2008, 27(3): 1-9
