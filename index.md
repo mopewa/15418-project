@@ -14,11 +14,11 @@ Traditional image resizing techniques, such as image scaling, resampling, or cro
 
 1. Energy computation
  
-An energy function is used to determine the importance of each pixel in the image. In my implementations, I defined the energy function has the sum of the vertical and horizontal gradients across all 3 channels of the image. <code>E(i,j) = E\_r(i,j) + E\_g(i,j) + E\_b(i,j), where E\_r(i,j)</code> is the sum of the horizontal and vertical gradients in the image's red channel. <code>E\_r(i,j) = 0.5 * (abs(I(i, j-1) - I(i, j+1)) + abs(I(i+1, j) - I(i-1, j)))</code>.
+An energy function is used to determine the importance of each pixel in the image. In my implementations, I defined the energy function has the sum of the vertical and horizontal gradients across all 3 channels of the image. <code>E(i,j) = E_r(i,j) + E_g(i,j) + E_b(i,j), where E_r(i,j)</code> is the sum of the horizontal and vertical gradients in the image's red channel. <code>E\_r(i,j) = 0.5 * (abs(I(i, j-1) - I(i, j+1)) + abs(I(i+1, j) - I(i-1, j)))</code>.
 
 2. Cumulative minimum energy computation (aka creating a "seam map")
  
-Identifying the optimal (minimum energy) seam is done using dynamic programming to compute the cumulative minimal energy of each pixel. For pixels from the second to the last row, the cumulative minimal energy is <pre><code>M(i, j) = E(i, j) + min(M(i-1, j-1), M(i-1, j), M(i-1, j+1))<code></pre>. While for pixels in the first row, <pre><code>M(1,j) = E(i, j)<code></pre>. 
+Identifying the optimal (minimum energy) seam is done using dynamic programming to compute the cumulative minimal energy of each pixel. For pixels from the second to the last row, the cumulative minimal energy is <code>M(i, j) = E(i, j) + min(M(i-1, j-1), M(i-1, j), M(i-1, j+1))<code>. While for pixels in the first row, <code>M(1,j) = E(i, j)<code>. 
 
 3. Backtracking for minimum seam identification
  
