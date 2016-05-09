@@ -128,18 +128,13 @@ I compared my CUDA implementation with a non-optimized sequential version writte
 </table>
 <br/><br/>
 
+<p>Speedup as function of number of seams</p>
+<img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/numseams_speedup.png" height="360px" style="float:center;"/>
 
-<table style="width:100%">
-	<tr>
-	<th>Speedup as function of number of seams</th>
-	<th>Speedup as function of image width</th>
-	</tr>
-	<tr>
-	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/numseams_speedup.png" height="360px" style="float:center;"/></td>
-	<td width="50%" align="center"><img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/imagesize_speedup.png" height="360px" style="float:center;"/></td>
-	</tr>
-</table>
-<br/><br/>
+<p>Speedup as function of image width</p>
+<img src="https://raw.githubusercontent.com/mopewaO/15418-project/gh-pages/images/imagesize_speedup.png" height="360px" style="float:center;"/>
+
+<p>Despite the overhead of launching kernels, transferring data to and from the device, and the little parallelization obtained from step 2, we see that running seam carving on CUDA provides significant speedup especially as the image size increases.</p>
 
 
 ### References
